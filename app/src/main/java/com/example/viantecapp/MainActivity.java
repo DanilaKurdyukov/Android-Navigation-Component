@@ -1,0 +1,48 @@
+package com.example.viantecapp;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import android.os.Bundle;
+
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity {
+NavController navController;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
+        navController = navHostFragment.getNavController();
+        NavigationView sideBar = findViewById(R.id.nav_menu);
+        NavigationUI.setupWithNavController(sideBar,navController);
+
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+                .setDrawerLayout(findViewById(R.id.drawer_layout))
+                .build();
+        Toolbar mainAppBar = findViewById(R.id.main_app_bar);
+        setSupportActionBar(mainAppBar);
+        getSupportActionBar().setTitle("Уведомления");
+        NavigationUI.setupWithNavController(mainAppBar,navController,appBarConfiguration);
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
+                if (navDestination.getLabel().equals("Уведомления")){
+                    mainAppBar.setNavigationIcon(R.drawable.ic_baseline_dehaze_24);
+                }
+                else{
+                    mainAppBar.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+                }
+            }
+        });
+    }
+}
