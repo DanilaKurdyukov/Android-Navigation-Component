@@ -22,5 +22,4 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/recycler_view_settings"
         android:layout_marginTop="10dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

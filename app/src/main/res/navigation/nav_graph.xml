@@ -54,6 +54,6 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.viantecapp.fragments.main.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="Настройки" />
 
 </navigation>

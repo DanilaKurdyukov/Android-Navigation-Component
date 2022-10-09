@@ -3,6 +3,7 @@ package com.example.viantecapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -56,7 +57,7 @@ NavController navController;
     }
     private void moveToSettingFragment(NavController navController,NavigationView sideBar){
         View navigationHeader = sideBar.getHeaderView(0);
-        ImageButton btnSettings = navigationHeader.findViewById(R.id.button_settings);
+        AppCompatButton btnSettings = navigationHeader.findViewById(R.id.button_settings);
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
