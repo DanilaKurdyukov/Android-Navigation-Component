@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    android:label="Настройки"
     app:startDestination="@id/notice">
 
     <fragment
         android:id="@+id/notice"
         android:name="com.example.viantecapp.fragments.main.NoticeFragment"
         android:label="Уведомления"
-        tools:layout="@layout/fragment_notice" >
+        tools:layout="@layout/fragment_notice">
         <action
             android:id="@+id/action_notice_to_bottomSheetFragment"
             app:destination="@id/bottomSheetFragment" />
@@ -50,5 +51,9 @@
         android:name="com.example.viantecapp.fragments.main.ReportFragment"
         android:label="Отчеты"
         tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.viantecapp.fragments.main.SettingsFragment"
+        android:label="SettingsFragment" />
 
 </navigation>
