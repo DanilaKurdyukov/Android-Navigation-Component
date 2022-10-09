@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/notice" android:title="Уведомления" android:icon="@drawable/ic_baseline_notifications_24"/>
-    <item android:id="@+id/wifi" android:title="WiFi" android:icon="@drawable/ic_baseline_wifi_24"/>
-    <item android:id="@+id/gsm" android:title="GSM" android:icon="@drawable/ic_baseline_signal_cellular_alt_24"/>
-    <item android:id="@+id/administrative" android:title="Административное" android:icon="@drawable/ic_baseline_admin_panel_settings_24"/>
+    <item android:title="Безопасность">
+        <menu>
+            <group>
+                <item android:id="@+id/notice" android:title="Уведомления" android:icon="@drawable/ic_baseline_notifications_24"/>
+                <item android:id="@+id/wifi" android:title="WiFi" android:icon="@drawable/ic_baseline_wifi_24"/>
+                <item android:id="@+id/gsm" android:title="GSM" android:icon="@drawable/ic_baseline_signal_cellular_alt_24"/>
+                <item android:id="@+id/administrative" android:title="Административное" android:icon="@drawable/ic_baseline_admin_panel_settings_24"/>
+            </group>
+        </menu>
+    </item>
+
    <item android:title="Аналитика">
        <menu>
            <group android:id="@+id/group_analytics">
