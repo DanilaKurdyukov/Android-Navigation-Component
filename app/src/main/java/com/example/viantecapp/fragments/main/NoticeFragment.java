@@ -3,10 +3,12 @@ package com.example.viantecapp.fragments.main;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,6 +24,8 @@ import com.example.viantecapp.adapters.SettingAdapter;
 import com.example.viantecapp.models.ModelData;
 import com.example.viantecapp.models.Setting;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -82,8 +86,8 @@ public class NoticeFragment extends Fragment {
         NavHostFragment navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
 
         navController = navHostFragment.getNavController();
-        settingsView = rootView.findViewById(R.id.recycler_view_settings);
-        dataView = rootView.findViewById(R.id.recycler_view_data);
+        /*settingsView = rootView.findViewById(R.id.recycler_view_settings);
+        dataView = rootView.findViewById(R.id.recycler_view_data);*/
 
         setHasOptionsMenu(true);
 
@@ -91,10 +95,24 @@ public class NoticeFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ViewPager2 viewPager = view.findViewById(R.id.viewPager);
+        TabLayout tabLayout = view.findViewById(R.id.tabLayout);
+        new TabLayoutMediator(tabLayout, viewPager, true,new TabLayoutMediator.OnConfigureTabCallback() {
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                // Здесь вам нужно изменить стиль и текст вкладки в соответствии с положением
+                tab.setText("fragment"+position);
+            }
+        }).attach();
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
-        getSettings();
-        getData();
+        /*getSettings();
+        getData();*/
     }
 
     private void getSettings(){
