@@ -19,14 +19,14 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance"
+            style="@style/MainTextAppearance"
             android:text="Период"
             android:layout_weight="1"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance"
+            style="@style/MainTextAppearance"
             android:text="Статус"
             android:layout_weight="1"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -44,7 +44,7 @@
             android:id="@+id/text_view_period"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance"
+            style="@style/MainTextAppearance"
             android:text="Сейчас"
             android:layout_weight="1"/>
 
@@ -52,7 +52,7 @@
             android:id="@+id/text_view_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance"
+            style="@style/MainTextAppearance"
             android:text="Новые"
             android:layout_weight="1"/>
     </androidx.appcompat.widget.LinearLayoutCompat>

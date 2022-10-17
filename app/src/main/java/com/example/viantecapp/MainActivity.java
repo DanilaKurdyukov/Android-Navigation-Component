@@ -53,18 +53,5 @@ NavController navController;
                 }
             }
         });
-        moveToSettingFragment(navController,sideBar);
-    }
-    private void moveToSettingFragment(NavController navController,NavigationView sideBar){
-        View navigationHeader = sideBar.getHeaderView(0);
-        AppCompatButton btnSettings = navigationHeader.findViewById(R.id.button_settings);
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.settingsFragment);
-                DrawerLayout layout = findViewById(R.id.drawer_layout);
-                layout.closeDrawers();
-            }
-        });
     }
 }

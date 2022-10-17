@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,20 +15,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.viantecapp.R;
 import com.example.viantecapp.adapters.DataAdapter;
 import com.example.viantecapp.adapters.SettingAdapter;
 import com.example.viantecapp.models.ModelData;
 import com.example.viantecapp.models.Setting;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -68,9 +63,9 @@ public class NoticeFragment extends Fragment {
 
     RecyclerView settingsView,dataView;
 
-    //class Setting
+    //class Event
     List<Setting> settings;
-    SettingAdapter mSettingAdapter;
+    SettingAdapter mEventAdapter;
 
     //class ModelData
     List<ModelData> data;
@@ -78,34 +73,28 @@ public class NoticeFragment extends Fragment {
 
     NavController navController;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_notice, container, false);
 
         NavHostFragment navHostFragment = (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
 
         navController = navHostFragment.getNavController();
-        /*settingsView = rootView.findViewById(R.id.recycler_view_settings);
-        dataView = rootView.findViewById(R.id.recycler_view_data);*/
+
 
         setHasOptionsMenu(true);
 
-        return rootView;
+        return inflater.inflate(R.layout.fragment_notice, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ViewPager2 viewPager = view.findViewById(R.id.viewPager);
-        TabLayout tabLayout = view.findViewById(R.id.tabLayout);
-        new TabLayoutMediator(tabLayout, viewPager, true,new TabLayoutMediator.OnConfigureTabCallback() {
-            @Override
-            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                // Здесь вам нужно изменить стиль и текст вкладки в соответствии с положением
-                tab.setText("fragment"+position);
-            }
-        }).attach();
+
+       settingsView = view.findViewById(R.id.recycler_view_settings);
+       getSettings();
+
     }
 
     @Override
@@ -115,19 +104,30 @@ public class NoticeFragment extends Fragment {
         getData();*/
     }
 
+
+
+    private List<Fragment> getFragments(){
+        return Arrays.asList(
+                new EventNoticeFragment(),
+                new AlertNoticeFragment()
+        );
+    }
     private void getSettings(){
         settings = new ArrayList<>();
         settings.add(new Setting(
-                "Поддельная точка доступа",
-                100,
-                150,
-                50,
-                100,
-                0,
-                1000
+                "Точки доступа OPN",
+                true,
+                true,
+                false
         ));
-        mSettingAdapter = new SettingAdapter(settings,getContext());
-        settingsView.setAdapter(mSettingAdapter);
+        settings.add(new Setting(
+                "Поддельная точка доступа",
+                true,
+                true,
+                false
+        ));
+        mEventAdapter = new SettingAdapter(settings,getContext());
+        settingsView.setAdapter(mEventAdapter);
     }
 
     private void getData(){

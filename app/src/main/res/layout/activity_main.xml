@@ -30,8 +30,6 @@
             app:layout_constraintTop_toBottomOf="@+id/main_app_bar"
             app:navGraph="@navigation/nav_graph" />
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -43,9 +41,10 @@
         app:menu="@menu/nav_menu"
         android:background="@color/white"
         app:itemIconTint="@color/gray"
-        app:itemTextAppearance="@style/TextAppearance"
+        app:itemTextAppearance="@style/MainTextAppearance"
         app:itemTextColor="@color/gray"
+        app:itemBackground="@drawable/navigation_item_color"
         app:subheaderColor="@color/gray"
-        app:subheaderTextAppearance="@style/TextAppearance"
+        app:subheaderTextAppearance="@style/MainTextAppearance"
         app:headerLayout="@layout/drawer_header" />
 </androidx.drawerlayout.widget.DrawerLayout>

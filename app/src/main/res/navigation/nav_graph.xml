@@ -51,9 +51,6 @@
         android:name="com.example.viantecapp.fragments.main.ReportFragment"
         android:label="Отчеты"
         tools:layout="@layout/fragment_report" />
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.viantecapp.fragments.main.SettingsFragment"
-        android:label="Настройки" />
+
 
 </navigation>

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
     android:clipToOutline="false">
 
-<de.hdodenhof.circleimageview.CircleImageView
-    android:id="@+id/image_view_profile_image"
-    android:layout_width="85dp"
-    android:layout_height="85dp"
-    android:src="@drawable/profile_image"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="10dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view_profile_image"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/profile_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_settings"
@@ -27,5 +28,16 @@
         android:layout_marginBottom="@dimen/vertical_margin"
         android:layout_marginLeft="@dimen/horizontal_margin"
         android:stateListAnimator="@null"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/MainTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_profile_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,22 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/drawable/ic_baseline_admin_panel_settings_24.xml" value="0.3675" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.196" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.226" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/drawable/navigation_item_color.xml" value="0.3075" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/drawable/settings_button_background.xml" value="0.3285" />
-        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/activity_main.xml" value="0.30854700854700856" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/child_item.xml" value="0.33" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/data_item.xml" value="0.25" />
-        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/drawer_header.xml" value="1.0" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/drawer_header.xml" value="0.33" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/filters_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_administrative.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_alert.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_event_notice.xml" value="0.28931623931623934" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_g_s_m.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_notice.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_notice.xml" value="0.22" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_report.xml" value="0.25" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_statistics.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/fragment_wifi.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/header_item.xml" value="0.25" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/information_item.xml" value="0.2611060743427017" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/setting_layout.xml" value="0.3" />
-        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/settings_item.xml" value="0.25" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/layout/settings_item.xml" value="0.67" />
+        <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/menu/nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/menu/notice_top_menu.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/kurdy/AndroidStudioProjects/ViantecApp/app/src/main/res/mipmap-anydpi-v26/ic_profile_image.xml" value="0.196" />

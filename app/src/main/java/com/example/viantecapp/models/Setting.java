@@ -4,33 +4,23 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Setting implements Parcelable {
+    private String name;
+    private boolean isTurnOn;
+    private boolean isSoundOn;
+    private boolean isNotify;
 
-    private String eventName;
-    private int nowNew;
-    private int nowAll;
-    private int perDayNew;
-    private int perDayAll;
-    private int perWeekNew;
-    private int perWeekAll;
-
-    public Setting(String eventName, int nowNew, int nowAll, int perDayNew, int perDayAll, int perWeekNew, int perWeekAll) {
-        this.eventName = eventName;
-        this.nowNew = nowNew;
-        this.nowAll = nowAll;
-        this.perDayNew = perDayNew;
-        this.perDayAll = perDayAll;
-        this.perWeekNew = perWeekNew;
-        this.perWeekAll = perWeekAll;
+    public Setting(String name, boolean isTurnOn, boolean isSoundOn, boolean isNotify) {
+        this.name = name;
+        this.isTurnOn = isTurnOn;
+        this.isSoundOn = isSoundOn;
+        this.isNotify = isNotify;
     }
 
     protected Setting(Parcel in) {
-        eventName = in.readString();
-        nowNew = in.readInt();
-        nowAll = in.readInt();
-        perDayNew = in.readInt();
-        perDayAll = in.readInt();
-        perWeekNew = in.readInt();
-        perWeekAll = in.readInt();
+        name = in.readString();
+        isTurnOn = in.readByte() != 0;
+        isSoundOn = in.readByte() != 0;
+        isNotify = in.readByte() != 0;
     }
 
     public static final Creator<Setting> CREATOR = new Creator<Setting>() {
@@ -45,32 +35,20 @@ public class Setting implements Parcelable {
         }
     };
 
-    public String getEventName() {
-        return eventName;
+    public String getName() {
+        return name;
     }
 
-    public int getNowNew() {
-        return nowNew;
+    public boolean isTurnOn() {
+        return isTurnOn;
     }
 
-    public int getNowAll() {
-        return nowAll;
+    public boolean isSoundOn() {
+        return isSoundOn;
     }
 
-    public int getPerDayNew() {
-        return perDayNew;
-    }
-
-    public int getPerDayAll() {
-        return perDayAll;
-    }
-
-    public int getPerWeekNew() {
-        return perWeekNew;
-    }
-
-    public int getPerWeekAll() {
-        return perWeekAll;
+    public boolean isNotify() {
+        return isNotify;
     }
 
     @Override
@@ -80,12 +58,9 @@ public class Setting implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(eventName);
-        dest.writeInt(nowNew);
-        dest.writeInt(nowAll);
-        dest.writeInt(perDayNew);
-        dest.writeInt(perDayAll);
-        dest.writeInt(perWeekNew);
-        dest.writeInt(perWeekAll);
+        dest.writeString(name);
+        dest.writeByte((byte) (isTurnOn ? 1 : 0));
+        dest.writeByte((byte) (isSoundOn ? 1 : 0));
+        dest.writeByte((byte) (isNotify ? 1 : 0));
     }
 }
